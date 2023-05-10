@@ -3,9 +3,9 @@ from custom_checkbox import CustomCheckBox
 
 
 def main(page: Page):
-  BG = '#041955'
+  BG = "#c6d2f5"   #'#041955'
   FWG = '#97b4ff'
-  FG = '#3450a1'
+  FG = '#a8baf0'
   PINK = '#eb06ff'
 
 
@@ -45,17 +45,8 @@ def main(page: Page):
                       ],
                   ),
               ),
-      
     ]
   )
-
-
-
-
-
-
-
-  
 
   def shrink(e):
     page_2.controls[0].width = 120
@@ -78,10 +69,6 @@ def main(page: Page):
       1,alignment=alignment.center_right)
     page_2.update()
 
-  
-
-
-      
 
   create_task_view = Container(
     content=Container(on_click=lambda _: page.go('/'),
@@ -89,8 +76,6 @@ def main(page: Page):
       content=Text('x')
       )
   )
-
-  
 
   tasks = Column(
     height=400,
@@ -285,25 +270,22 @@ def main(page: Page):
 
   )
 
-
-
-  
   pages = {
-      '/':View(
-                "/",
-                [
-                   container
-                ],
-            ),
+      '/': View(
+          "/",
+          [
+            container
+          ],
+      ),
       '/create_task': View(
-                    "/create_task",
-                    [
-                        create_task_view
-                    ],
-                )
-            
-    }
-    
+          "/create_task",
+          [
+            create_task_view
+          ],
+      )
+
+  }
+
 
   def route_change(route):
     page.views.clear()
@@ -316,4 +298,4 @@ def main(page: Page):
   page.on_route_change = route_change
   page.go(page.route)
 
-app(target=main,assets_dir='assets')
+app(target=main,assets_dir='assets', view=WEB_BROWSER, port=8080)
