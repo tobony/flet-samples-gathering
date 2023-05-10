@@ -2,4 +2,4 @@
 gather Flet-Samples
 
 to delete remote repo
-how?
+how?.
