@@ -3,35 +3,36 @@ from flet import Page, ElevatedButton, AlertDialog, Text, TextButton
 
 
 def main(page: Page):
-    page.title = "Anasayfa"
+    page.title = "Pop-up Dialog Test"
     page.window_width = 400
     page.window_height = 700
 
-    def close_dlg(e):
-        dlg.open = False
+    def close_dialog(e):
+        dialog.open = False
         page.update()
 
-    dlg = AlertDialog(
+    dialog = AlertDialog(
         modal=True,
-        title=Text("Hello, world!"),
-        content=Text("Emin misiniz?"),
+        title=Text("Hello, world or NOT"),
+        content=Text("바꿀겁니까?"),
         actions=[
-            TextButton("Evet", on_click=close_dlg),
-            TextButton("Hayır", on_click=close_dlg)
+            TextButton("AAA", on_click=close_dialog),
+            TextButton("BBB", on_click=close_dialog)
         ],
-        on_dismiss=lambda e: print("Dialog kapatıldı!")
+        on_dismiss=lambda e: print("딩동댕동")
     )
 
-    def open_dlg(e):
-        page.dialog = dlg
-        dlg.open = True
+    def open_dialog(e):
+        page.dialog = dialog
+        dialog.open = True
         page.update()
 
-    b1 = ElevatedButton(text="Aç", on_click=open_dlg)
+    b1 = ElevatedButton(text="변경", on_click=open_dialog)
 
     page.controls.append(b1)
 
     page.update()
 
 
-flet.app(target=main)
+# flet.app(target=main)
+flet.app(target=main, port=8080, view=flet.WEB_BROWSER)
