@@ -1,7 +1,7 @@
 # flet-sample-forks
 gather Flet-Samples
   <br>  <br>
-to delete remote repo
+to delete remote repo   <br>
 how?. <br>
 <br>
 git rm -r --cached .  <br>
