@@ -1,14 +1,14 @@
 # flet-sample-forks
 gather Flet-Samples
-
+  <br>  <br>
 to delete remote repo
-how?. 
-"""
-git rm -r --cached .
-git add .
-git commit -m "gathering"
-git push
-"""
-
+how?. <br>
+<br>
+git rm -r --cached .  <br>
+git add .  <br>
+git commit -m "gathering"  <br>
+git push  <br>
+  <br>
+  <br>
 #how to   <br>
-original git repo address to find / show?
+original git repo address to find / show?  <br>
