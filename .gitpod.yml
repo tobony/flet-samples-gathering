@@ -9,10 +9,10 @@ tasks:
     # change working directory as per configured in `checkoutLocation`
     # which is configured above as `/workspaces/backend`
     before : | 
-    #  sudo apt update -y 
-    #  sudo apt upgrade -y
+    # sudo apt update -y 
+    # sudo apt upgrade -y
     # sudo apt-get install -y cmake git g++ p7zip libpython2-dev
-      sudo apt install -y fonts-naver-d2coding
+    # sudo apt install -y fonts-naver-d2coding
       pip3 install flet
       
 
