@@ -19,8 +19,6 @@ def main(page: Page):
     page.controls.append(b1)
     page.controls.append(txt_number)
     page.controls.append(b2)
-
     page.update()
 
-
-flet.app(target=main)
+flet.app(target=main, view=flet.WEB_BROWSER, port=8080)
