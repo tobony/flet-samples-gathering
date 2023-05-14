@@ -1,0 +1,12 @@
+*.pyc
+*.egg-info
+*.bak
+.coverage
+.tox
+.venv
+node_modules
+*.lock
+/demo.db
+.idea
+.run
+/dist/
