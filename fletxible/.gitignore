@@ -1,0 +1,6 @@
+venv
+dist
+build
+Fletxible.egg-info
+flet_config
+pages
