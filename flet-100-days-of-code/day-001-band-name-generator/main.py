@@ -1,6 +1,5 @@
 import flet as ft
 
-
 def main(page: ft.Page):
     page.title = "Flet Band Name Generator"
     # page.vertical_alignment = "center"
@@ -34,5 +33,4 @@ def main(page: ft.Page):
         band_name,
     )
 
-
-ft.app(target=main)
+ft.app(target=main, view=ft.WEB_BROWSER, port=8080)
