@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "flet_icon"
+version = "0.3"
+description = "a collection of icons for flutter as flet"
+authors = ["Tai <1174501146@qq.com>"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["packaging", "flet", "flet-icon", "flutter", "icon"]
+include = [
+    { path = "images/", format = "sdist"},
+]
+[tool.poetry.scripts]
+
+fleticon = "flet_icon:run"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyperclip = "^1.8.2"
+flet = "^0.4.2"
+
+[tool.poetry.dev-dependencies]
+
+[[tool.poetry.source]]
+name = "清华源"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
